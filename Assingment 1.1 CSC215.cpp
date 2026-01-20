@@ -18,6 +18,8 @@ int main()
     bool isStudent = true;
     cout << "The Value of X =" << x << endl;
     cout << "The Value of gpa =" << gpa << endl;
+    cout << "The value of Grade =" << grade << endl;
+    cout << "Is Student? =" << isstudent << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
