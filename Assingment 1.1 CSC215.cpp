@@ -12,6 +12,12 @@ int main()
     int x = 100;
     // 2- doubles; numbers with fractions
     double gpa = 3.7;
+    // 3- characters; one character inside two
+    char grade = 'A';
+    // 4- boolean: true or false
+    bool isStudent = true;
+    cout << "The Value of X =" << x << endl;
+    cout << "The Value of gpa =" << gpa << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
