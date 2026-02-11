@@ -5,47 +5,57 @@
 using namespace std;
 int main()
 {
-	//collect user data 
-	cout << "Enter Professor's full name, as a guess. " << endl;
-	cout << "Your first name is:" << fname << " , and your last name is: " // TODO: design and comment issue
-		<< lname << " and your age is: " << age << endl;
 
 
-	// IF you type in a corretc name, it ends. 
-	if (age > 18) // TODO: design and comment issues
+	// Declare variables to store first and last name
+	string firstname, lastname, location;
+
+	//collect user data Part 1; Enter name
+	cout << "Enter Professor's full name, as a guess.(Proper Nouns must be Capitalized) " << endl;
+	cout << "First name: ";
+	cin >> firstname;
+	cout << "Last name: ";
+	cin >> lastname;
+	cout << "first name is:" << firstname << " ,last name is:" << lastname << endl;
+	
+	
+	
+	// collect user data part 2; enter location at UAT
+	cout << "Enter location at UAT. ";
+	cin >> location; 
+
+	srand(time(0)); // Seed the random number generator with the current time 
+	
+	//generate and print 10 random numbers 
+	for (int i = 0; i < 10; i++);
+    cout << rand() << " ";
+
+
+	// IF you type in a correct name, it ends.
+	// TODO: design and comment issues
+	if ((firstname == "Sue" && lastname == "Ashton" && location == "Room 206") ||
+		(firstname == "Brian" && lastname == "Becote" && location == "Room 106") ||
+		(firstname == "Hue" && lastname == "Henry" && location == "Cybersecurity Room") ||
+		(firstname == "Ryan" && lastname == "Murray" && location == "Maker Lab") ||
+		(firstname == "Tyler" && lastname == "Widener" && location == "Engineering Lab") ||
+		(firstname == "Rae" && lastname == "Crusoe" && location == "Room 107") ||
+		(firstname == "Matthew" && lastname == "Marquit" && location == "Room 205") ||
+		(firstname == "Ashley" && lastname == "Mckinley" && location == "Room 208") ||
+		(firstname == "Jake" && lastname == "Perrine" && location == " Room 252") ||
+		(firstname == "Daniel" && lastname == "Pike" && location == "Room 206"))
 	{
-		cout << "You are old enough to play JUMANJI!" << endl;
+		cout << "Correct!" << endl;
 	}
 	else
 	{
-		cout << "You are not old enough to play JUMANJI!" << endl;
-
-
-
-
-
-
-
-	
-	
-	
-	
-	// A declared array of five integers
-	int numbers[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-	cout << numbers[0] << endl;
-	// array of professor names 
-	cout << "Here is the list of professors you can type in" << endl;
-	string names[10] = {"Sue Ashton", "Brian Becote", "Hue Henry", "Ryan Murray", "Tyler Widener","Rae Crusoe", "Matthew Marquit", "Ashley Mckinley", "Jake Perrine", "Daniel Pike"};
-	for (int i = 0; i < 10; i++) {
-		cout << names[i] << endl;
+		cout << "Try Again!" << endl;
 	}
-	
 
 	{
-		int Beep (500); 
+		int(beep); 
 	}
-	
 }
+
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
