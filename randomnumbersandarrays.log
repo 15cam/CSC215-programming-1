@@ -1,3 +1,0 @@
-﻿  randomnumbersandarrays.cpp
-C:\Users\CCOPELAND92274\source\repos\randomnumbersandarrays\randomnumbersandarrays\randomnumbersandarrays.cpp(14,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  randomnumbersandarrays.vcxproj -> C:\Users\CCOPELAND92274\source\repos\randomnumbersandarrays\x64\Debug\randomnumbersandarrays.exe
