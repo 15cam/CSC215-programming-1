@@ -56,7 +56,7 @@ void playGame()
 // function to give user hints about the number
 void giveHint(int secretNumber)
 {
-    if (secretNumber % 2 == 0)
+    if (secretNumber % 10 == 0)
     {
         cout << "Hint: The number is even.\n ";
     }
@@ -99,10 +99,9 @@ int main()
     // seed random number generator with current time
 	//Static cast converts time to usigned int,and usigned int is integer type to represent postive whole numbers, 
     // which is the expected type for srand. This ensures that each time the program runs, it generates a sequence of random numbers
-    // 
-	srand((time(0)));
-
- // Welcomes user to my game 
+	srand(static_cast<unsigned int>(time(0)));
+    
+	 // Welcomes user to my game 
     cout << "Welcome to my number guessing game!" << endl;
 
     // Display instructions
@@ -123,15 +122,7 @@ int main()
     //Score/Stats to user 
     playStats();
 
-    // my code will repeat mutiple times till player decides to stop
-	
-		askToPlayAgain();
-
-
- 
-
-
-    return 0; // Ensure main returns as a integer
+   return 0; // Ensure main returns as a integer
 }
 
 //references 
