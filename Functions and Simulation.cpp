@@ -89,8 +89,10 @@ void askToPlayAgain()
         cout << " Thanks for playing! Goodbye!\n ";
     }
 }
+
 int main()
 {
+
 
     
     
@@ -115,15 +117,16 @@ int main()
     // Start the game
     playGame();
 
-
-  
-
-
-	//Ask if the user wants to play again
+    //Ask if the user wants to play again
 	askToPlayAgain();
 
     //Score/Stats to user 
     playStats();
+
+    // my code will repeat mutiple times till player decides to stop
+	
+		askToPlayAgain();
+
 
  
 
