@@ -8,21 +8,21 @@
 using namespace std;
 
 // this function is to display instructions
-void instructions() 
+void instructions()
 {
 
     cout << " You must choose a number between 1 and 50.\n ";
 }
 
 // this function will generate a "secret" random number for user to guess
-int randomNumber() 
+int randomNumber()
 {
-    // Generate a random number between 1 and 500
+    // Generate a random number between 1 and 50
     return rand() % 50 + 1;
 }
 
-// main game loop
-void PlayGame() 
+// main game loop function
+void PlayGame()
 {
     int secretNumber = randomNumber(); // Call the randomNumber function to get the secret number
     int guess;
@@ -30,21 +30,21 @@ void PlayGame()
 
     cout << " You have " << attempts << " attempts to guess the number.\n ";
 
-    for (int i = 0; i < attempts; i++) 
+    for (int i = 0; i < attempts; i++) // for loop for the 3 attempts
     {
-        cout << "Enter your guess: ";
+        cout << "Enter your guess: "; 
         cin >> guess;
 
         if (guess == secretNumber) 
         {
             cout << " Congratulations! You guessed the number!\n ";
-            return;
-        } 
-        else if (guess < secretNumber) 
+            return; // return string function to end game if user wins
+        }
+        else if (guess < secretNumber)
         {
             cout << " Too low! Try again.\n ";
-        } 
-        else 
+        }
+        else if (guess > secretNumber)
         {
             cout << " Too high! Try again.\n ";
         }
