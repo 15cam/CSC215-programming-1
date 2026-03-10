@@ -10,13 +10,17 @@ using namespace std;
 // predecalring my functions 
 void greetings();
 void instructions();
-//string peanutsNames();
-//int score(string a);
-//double reward(int a);
+string peanutsNames();
+int score(string a);
+double reward(int a);
 
 int main(){
-	greetings();
-	instructions();
+	// variables for this function 
+	string myString;
+	cout << "Why doesnt this work? ";
+	cin >> myString;
+	/*greetings();
+	instructions();*/
 
 }
 
@@ -26,8 +30,26 @@ Ask them if they want to play and if they say yes, then move to next function. I
 
 */
 void greetings() {
-	cout << "\nWould you like to play the Peanuts Game?" << endl;
+	// variables for this function 
+	string response;
+	cout << "\nWould you like to play the Peanuts Game? " << endl;
 
+    cin >> response; // variable response, lifetime created
+
+	cout << "Yes or No?";
+	
+	
+	if (response = Yes)
+	{
+		cout << "\n Awesome! Lets go!" << endl;  // if user responds yes, then program keeps going 
+	}
+
+
+	else if ( response = No)
+
+	{ 
+		cout << "\n Maybe Next time! " << endl; // if user responds no, then program ends
+	}
 };
 
 /* 
@@ -36,18 +58,22 @@ display instructions for the game to the user
 void instructions() {
 	cout << "\nType in a random Peanuts name from the list above, \n and it will give you a score and will give you a reward, like at a casino." << endl;
 
+
+	// proceed button to move to next function 
+	    
+
 };
 
 /* 
 Displays names of the Peanuts characters for the user to type in 
 */
-//string peanutsNames() {
-//    string name; // variable name, lifetime created
-//	name = "Snoopy";
-//
-//
-//    return name; // variable name, lifetime dead 
-//};
+string peanutsNames() {
+    string name; // variable name, lifetime created
+	name = "Snoopy";
+
+
+    return name; // variable name, lifetime dead 
+};
 
 /*
 display the score of the user and how many points they get accordign to the name they typed in if they got it correctly
@@ -56,11 +82,11 @@ Score function will call reward function
 
 
 */
-//int score(string a) {
-//	//int userScore; // variable userscore, lifetime created
-//
-//	//return userScore; // variable userscore, lifetime dead
-//};
+int score(string a) {
+	//int userScore; // variable userscore, lifetime created
+
+	//return userScore; // variable userscore, lifetime dead
+};
 
 /*
 Accepts a argument from score function 
@@ -69,12 +95,12 @@ returns the $ value to score
 After reward is given, program shall end here. 
 Display the reward to user 
 */
-//double reward(int a) {
-//	//cout << "THis works for testing" << endl;
-//	//// must case a to a double
-//	//int scoreValue; // lifetime created
-//	//double rewardMoney; // variable rewardMoney, lifetime created
-//
-//	//return rewardMoney; // variable rewardMoney, lifetime dead
+double reward(int a) {
+	cout << "THis works for testing" << endl;
+	// must case a to a double
+	int scoreValue; // lifetime created
+	double rewardMoney; // variable rewardMoney, lifetime created
+
+	return rewardMoney; // variable rewardMoney, lifetime dead
 //};
 
