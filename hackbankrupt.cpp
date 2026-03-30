@@ -5,8 +5,8 @@ using namespace std;
 
 // predeclare functions 
 
-int normBalance();// this will be normalize bank transaction
-string hackTransaction(int accountFunds); // this will be to hack transaction
+int normBalance(int transaction);// this will be normalize bank transaction
+string hackTransaction(int &accountFunds); // this will be to hack transaction
 
 
 int main() {
@@ -14,60 +14,59 @@ int main() {
 	cout << "Welcome to Comerca Bank!" << endl;
 	//ask user for a transaction
 	cout << "\nPlease enter your bank transaction: " << endl;
-	string transaction;
+	int transaction;
 	cin >> transaction;
 
-	int accountFunds = 2000; // this is the original funds in the account
+	//calling function normBalance
+	normBalance(transaction);
 
 	return 0;
 }
-
+//declare functions 
 //function one (THE MAIN ONE) 
 
-int normBalance() {
+int normBalance(int transaction) {
 	//this is my code block for the first function
 
 	//integer parameters for both accounts 
-	int accountFunds = 2000;
+	int accountFunds = transaction;
 	int accountBalance = 5000;
 
 	//print orignal funds and balance for both accounts
-	cout << "Original Funds: " << accountFunds << endl;
-	cout << "Original Balance: " << accountBalance << endl;
+	cout << "\nOriginal Funds: " << accountFunds << endl;
+	cout << "\nOriginal Balance: " << accountBalance << endl;
 
 
-	//Print the funds and balance showing this normal transaction should change nothing
-	cout << "Funds: " << endl;
-	cout << "Balance: " << endl;
 	//pass account balance by reference to the hack transaction function
-	int num = 5000;
-	int& ref = num; // ref is referncing to variable num
-	cout << "Num: " << num << endl;
-	cout << "Ref: " << ref << endl;
-	ref = 10000;
-	cout << "Num: " << num << endl; // num after modifiying
-	cout << "Ref: " << ref << endl; // ref after modifiying
+	int& ref = transaction; // ref is referncing to variable num
+	hackTransaction(ref);
 	return 0;
 
 }
 
 //function two (returns to main) 
 
-string hackTransaction(int accountFunds)
+string hackTransaction(int &accountFunds)
 //this is my code block for the second function
 {
 	//swap the bank balances 
-	int accountFunds = 10000; // this is the new hacked funds in the account
+	int hackedFunds = 5000; // this is the new hacked funds in the account
 
-
-
-
+	// swap the variable transaction for varaible num 
+	int temper = accountFunds;
+	accountFunds = hackedFunds;
+	hackedFunds = temper;
+	
 	// print out the new balances
-	cout << "Hacking Funds: " << endl;
-	cout << "Hacking Balance: " << endl;
-	string hackedTransaction = "Hacking your Transaction: " & int(accountFunds);
+	cout << "\nHacking Funds: " << accountFunds << endl;
+	cout << "\nHacking Balance: " << hackedFunds << endl;
+	string hackedTransaction = "Hacking your Transaction: ";
 
 
 
-	return normBalance(0);
+	return hackedTransaction;
+
 }
+
+
+
