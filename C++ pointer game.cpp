@@ -6,16 +6,16 @@ using namespace std;
 
 
 //predeclare functions
-int add(int operation);
-int subtract(int operation);
-int multiply(int operation);
-int divide(int operation);
+int add(int* a, int* b);
+int subtract(int* a, int* b);
+int multiply(int* a, int* b);
+int divide(int* a, int* b);
 
 
 
 int main()
 {
-    
+
     //greet user for good user experience
     
     cout << "Welcome user to my Math game!" << endl;
@@ -25,7 +25,7 @@ int main()
     cout << "\nChoose the operation you want to do:" << endl;
    
     // array of operations for user to type in 
-    string operations[4] = { "Add", "Subtract", "Multiply", "Divide" }; 
+    string operations[4] = { "Add(1)", "Subtract(2)", "Multiply(3)", "Divide(4)" }; 
 
     // Display all operations for user to choose
     for (int i = 0; i < 4; ++i)
@@ -41,25 +41,33 @@ int main()
     add(operation);
     subtract(operation);
     multiply(operation);
-    divide(operation);
+    divide(operation); 
     
     
     return 0;
 
 }
 
-// declare functions here
+// declare functions here (return to greetings function if user types in greetings, return to add function if user types in add, etc.)
 
 //function 1
-int add(int operation)
+int add(int* a, int* b)
 //code block with c++ pointers
 { 
-// if user types in add, go to this function (in other words, only this function gets called) 
-if (operation == )
+// declare variables for user input
+    int num1, num2;
+    cout << "Enter the first number: ";
+    cin >> num1;
+    cout << "Enter the second number: ";
+    cin >> num2;
+    // perform addition using pointers
+    int* ptr1 = &num1;
+    int* ptr2 = &num2;
+    int sum = *ptr1 + *ptr2;
+    // display result
+	cout << "The sum is: " << sum << endl;
 
-
-
-    return 0;
+       return 0;
 }
 
 
@@ -68,44 +76,58 @@ if (operation == )
 
 
 //function 2
-int subtract(int operation)
+int subtract(int* a, int* b)
 //code block with c++ pointers
-{ 
-//if user types in subtract, go to this function (in other words, only this function gets called) 
-if (operation =)
+{
+// declare variables for user input
+    int num1, num2;
+    cout << "Enter the first number: ";
+    cin >> num1;
+    cout << "Enter the second number: ";
+    cin >> num2;
+    // perform subtraction using pointers
+    int* ptr1 = &num1;
+    int* ptr2 = &num2;
+    int difference = *ptr1 - *ptr2;
+	// display result
 
-
-
-   
-
-    return 0;
+     return 0;
 }
-
 
 
 //function 3 
-int multiply(int operation)
+int multiply(int* a, int* b)
 //code block with c++ pointers
 { 
-//if user types in multiply, go to this function (in other words, only this function gets called) 
-if (operation =)
-
-
+  // declare variables for user input
+    int num1, num2;
+    cout << "Enter the first number: ";
+    cin >> num1;
+    cout << "Enter the second number: ";
+    cin >> num2;
+    // perform multiplication using pointers
+    int* ptr1 = &num1;
+    int* ptr2 = &num2;
+	int product = *ptr1 * *ptr2;
 
     return 0;
-}
+ }
 
 
 
 //function 4 
-int divide(int operation)
+int divide(int* a, int* b)
 //code block with c++ pointers 
 {
-//if user types in divide, go to this function (in other words, only this function gets called) 
-if (operation =)
-
-
-
-
-    return 0;
+	// declare variables for user input
+    int num1, num2;
+    cout << "Enter the first number: ";
+    cin >> num1;
+    cout << "Enter the second number: ";
+    cin >> num2;
+    // perform division using pointers
+    int* ptr1 = &num1;
+	int* ptr2 = &num2;
+      
+       return 0;
 }
