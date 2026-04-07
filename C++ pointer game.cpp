@@ -90,6 +90,7 @@ int subtract(int* a, int* b)
     int* ptr2 = &num2;
     int difference = *ptr1 - *ptr2;
 	// display result
+	cout << "The difference is: " << difference << endl;
 
      return 0;
 }
@@ -109,6 +110,8 @@ int multiply(int* a, int* b)
     int* ptr1 = &num1;
     int* ptr2 = &num2;
 	int product = *ptr1 * *ptr2;
+	//display result
+	cout << "The product is: " << product << endl;
 
     return 0;
  }
@@ -128,6 +131,12 @@ int divide(int* a, int* b)
     // perform division using pointers
     int* ptr1 = &num1;
 	int* ptr2 = &num2;
+	//display result
+    if (*ptr2 != 0) {
+        int quotient = *ptr1 / *ptr2;
+        cout << "The quotient is: " << quotient << endl;
+	}
+	else {
       
        return 0;
 }
