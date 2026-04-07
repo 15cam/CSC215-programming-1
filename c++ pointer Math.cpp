@@ -24,6 +24,7 @@ int main()
 	int b = 0;
 
 	//call grettings function for user interaction 
+	//greetings function will be the main function controlling all of the other four functions
 	void greetings();
 
 	//display choices available to user 
@@ -48,7 +49,7 @@ int main()
 	cout << "Please enter a integer seperated by a space: ";
 	cin >> userNum1;
     a = userNum1;
-
+	// ask the user 
 	cout << "Please enter another integer seperated by a space: ";
 	cin >> userNum2;
 	b = userNum2;
@@ -63,20 +64,24 @@ int main()
 	// if user types 2 call subtract function
 	// if user types 3 call multiply function
 	// if user types 4 call divide function
+
+	//if statements for which number the user types in
+	
 	if (operation == 1) {
-		add(a_ptr, b_ptr);
+		add(a_ptr, b_ptr); // if user types in 1, the add function gets called.
 	}
 	else if (operation == 2) {
-		subtract(a_ptr, b_ptr);
+		subtract(a_ptr, b_ptr); // if the user types in 2, the subtract function gets called. 
 	}
 	else if (operation == 3) {
-		multiply(a_ptr, b_ptr);
+		multiply(a_ptr, b_ptr); // if the user types in 3, the multiply function gets called. 
 	}
 	else if (operation == 4) {
-		divide(a_ptr, b_ptr);
+		divide(a_ptr, b_ptr); // if the user types in 4, the divide function gets called. 
 	}
+	// if user types any other number than zero or greater than 4, 
 	else {
-		cout << "Invalid operation selected. Please choose a number between 1 and 4." << endl;
+		cout << "Invalid number. Please choose a number between 1 and 4." << endl;
 	}
 
 	return 0;
@@ -89,6 +94,7 @@ int main()
 
 // function to greet the user and explain the program
 void greetings() {
+	// explain rules to the user 
 	cout << "Welcome to the Math Game.\n"
 		<< "In this game you are going to choose an operation.\n"
 		<< "Then you will choose numbers to pass to the\n"
@@ -99,7 +105,7 @@ void greetings() {
 // function one: add two integers and return the result
 int add(int* a, int* b) {
 	// Perform the addition
-	int result = *a + *b;
+	int result = *a + *b; 
 	cout << "\nThe result of adding " << *a << " and " << *b << " is: " << result << endl;
 	return result;
 }
@@ -122,7 +128,7 @@ int multiply(int* a, int* b) {
 
 // function four: divide two integers and return the result
 int divide(int* a, int* b) {
-	// Check for division by zero
+	// Check for division by zero (In math logic, 
 	if (*b == 0) {
 		cout << "\nError: Cannot divide by zero." << endl;
 		return 0; // Return 0 or handle as needed
