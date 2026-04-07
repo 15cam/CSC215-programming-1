@@ -49,6 +49,7 @@ int main()
 }
 
 // declare functions here (return to greetings function if user types in greetings, return to add function if user types in add, etc.)
+// aLL functions have the same code block with c++ pointers, but different math operations (add, subtract, multiply, divide)
 
 //function 1
 int add(int* a, int* b)
