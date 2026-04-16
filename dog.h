@@ -1,19 +1,31 @@
-// This header file defines a simple class representing a dog, with attributes for the dog's name and age, and a method to make the dog bark.
+// This header file defines a simple class representing a dog, with attributes for the dog's name and age, and a method to print the information out.
 
+#ifndef DOG_H// Include guard to prevent multiple inclusions of this header file
+#define DOG_H// Define the Dog class
 
-#ifndef DOG_H  // my own header file guard to prevent multiple inclusions
-#define DOG_H  // Include necessary libraries
 #include <string>
+using namespace std;
 
+class Dog {
 
-class Dogs
-{
+// private command restricts access to the other class members, (name and age) is private to the dog class and cannot be accessed directly. 
+
+private:
+	string name;// Attribute to store the dog's name
+	int age;// Attribute to store the dog's age
+
+//public command allows full access to the other class memebers however. 
+
 public:
+	Dog();// Default constructor
+    Dog(string n, int a);
 
-	std::string name; // Attribute to store the dog's name
-	int age; // Attribute to store the dog's age
 
-	Dogs(std::string n, int a) : name(name), age(age) {} // Constructor to initialize the dog's name and age
 
+	string getName();// Method to get the dog's name
+	int getAge();// Method to get the dog's age
+
+	void printDog();// Method to print the dog's details
 };
-#endif // DOG_H
+
+#endif
