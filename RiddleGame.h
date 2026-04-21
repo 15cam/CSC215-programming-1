@@ -3,29 +3,20 @@
 #define RIDDLEGAME_H
 // string libary to store user input and riddles.
 #include <string>
-// it will store the riddle and the user's answer input. 
-
+using namespace std;
 // class and objects declaration for the game 
-class RiddleGame {
-//public class to store riddles and user input. 
+class RiddleGame
+{
 public:
-	RiddleGame();
-
-	// function to run the game 
-	void runGame();
-
-// private class (private is restricting access to other class members compared to public,to store specifcally the riddle and user input 
-private: 
-
+	// string variable to store user input and riddle
+	//std is required to use string library. 
 	int riddles;
-	// std is required for string library
-	std::string userInput;
-	// number of riddles in the game declaration. Will be in a array in RiddleGame.cpp source file.
-	int numRiddle;
-
-	std::string riddleArray[10]; //array declaration with type
-
-	// predeclare functions to be used, and all will be commented and defined RiddleGame.cpp source file. 
+	string getRiddles[10]; //array to store riddles
+	string getAnswers[10]; //array to store answers
+	// public class to access the private class members 
+public:
+	//predeclare functions to the riddle game, all commented and defined over in RiddleGame.cpp file.
+	RiddleGame();
 	void loadRiddles();
 	void greetings();
 	void playAgain();
@@ -34,5 +25,6 @@ private:
 	int askRiddle(int attempts);
 	int checkanswer();
 	void score();
+
 };
 #endif // RIDDLEGAME_H
